@@ -1,18 +1,18 @@
 var questions = [
   {
-    question: "What is coding",
-    answers: [],
+    text: "What is coding",
+    answers: ["a", "b"],
   },
   {
-    question: "What is coding",
-    answers: [],
+    text: "What is coding",
+    answers: ["a", "b"],
   },
   {
-    question: "What is coding",
-    answers: [],
+    text: "What is coding",
+    answers: ["a", "b"],
   },
   {
-    question: "What is coding",
-    answers: [],
+    text: "What is coding",
+    answers: ["a", "b"],
   },
 ];
