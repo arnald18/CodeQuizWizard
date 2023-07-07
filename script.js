@@ -4,16 +4,30 @@ var questionContainer = document.querySelector("#question-container");
 // start the quiz when we click start
 
 var questionResult = document.querySelector("#question-results");
-var timerElement = document.querySelector_("#timer");
+var timerElement = document.querySelector("#timer");
+var viewHighScores = document.querySelector("#high-score");
 
 var currentIndex;
 var timer;
-var timeLeft;
+var timeLeft = 60;
+
+function navigate() {
+  clearInterval(timer);
+  localStorage.setItem("new-score", timeLeft);
+  window.location.href = "highscores.html";
+}
 
 function startTimer() {
   timeLeft = 60;
 
-  timer = setInterval(function () {}, 1000);
+  timer = setInterval(function () {
+    timerElement.textContent = "Time: " + timeLeft;
+
+    if (timeLeft <= 0) {
+      navigate();
+    }
+    timeLeft--;
+  }, 1000);
 }
 
 function showQuestion() {
@@ -53,6 +67,7 @@ function startGame() {
   // start showing questions
 
   currentIndex = 0;
+  startTimer();
   showQuestion();
 }
 
@@ -61,12 +76,16 @@ questionContainer.addEventListener("click", function (event) {
   // get element that was clicked
   let element = event.target;
 
+  if (element.matches("button")) {
+  }
+
   // check if we clicked on a
   if (element.matches("button")) {
     if (element.textContent === questions[currentIndex].correctAnswer) {
       questionResult.textContent = "correct";
     } else {
       questionResult.textContent = "incorrect";
+      timeLeft -= 10;
     }
 
     currentIndex++;
@@ -74,9 +93,14 @@ questionContainer.addEventListener("click", function (event) {
       showQuestion();
     } else {
       // go to the highscore screen
-      window.location.href = "./highscores.html";
+      navigate();
     }
   }
 });
 
 // create a highscore page
+viewHighScores.addEventListener("click", function () {
+  clearInterval(timer);
+  localStorage.setItem("new-score", -1);
+  window.location.href = "highscores.html";
+});

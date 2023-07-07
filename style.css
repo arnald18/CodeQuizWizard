@@ -1,0 +1,147 @@
+body {
+  background-color: yellowgreen;
+}
+/* header style */
+header {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
+  align-content: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+#container-start {
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+}
+
+#container-start h1 {
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+#container-start p {
+  width: 450px;
+  font-size: 1.75rem;
+}
+/* ? start button style */
+#start-button {
+  width: 225px;
+  height: 100px;
+  font-size: 2rem;
+  font-weight: bolder;
+  border-radius: 1rem;
+}
+
+#start-button:hover {
+  background-color: firebrick;
+}
+/* header style */
+header button {
+  font-size: 2rem;
+  font-weight: normal;
+  background-color: yellow;
+  border-radius: 1rem;
+}
+
+header button:hover {
+  background-color: firebrick;
+}
+
+/* ? quuestion styles */
+#question-container {
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 65px;
+}
+
+#question-container h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: left;
+}
+
+#question-container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 25px;
+}
+
+#question-container button {
+  background-color: antiquewhite;
+  font-weight: medium;
+  min-width: 300px;
+  line-height: 5rem;
+  font-size: 2rem;
+}
+
+#question-container button:hover {
+  background-color: firebrick;
+}
+
+#question-results {
+  margin: 50px auto;
+  font-size: 4rem;
+  font-weight: bolder;
+  display: table;
+}
+
+#timer {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+/* high scores  */
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#initials-label {
+  margin-right: 25px;
+  font-size: 4rem;
+  font-weight: medium;
+}
+
+#initials {
+  width: 200px;
+  line-height: 3rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* high scores list */
+
+#container ol {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  gap: 15px;
+}
+
+#container li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#container h3 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+#container p {
+  font-size: 3rem;
+  font-weight: bolder;
+}
