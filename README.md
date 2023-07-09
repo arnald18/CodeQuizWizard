@@ -1,6 +1,8 @@
 # CodeQuizWizard
 
-## Descrition
+## Description
+
+Code Quiz Project: Test your programming knowledge with this interactive quiz application. Challenge yourself with a series of questions, and track your progress. Improve your coding skills while having fun!""
 
 ## links
 
